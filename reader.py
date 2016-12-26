@@ -25,7 +25,7 @@ class Reader(threading.Thread):
                                 topic=self.topic, channel=self.channel, max_in_flight=15)
         self.data = queue
     
-    def writeQ(self, message):
+    def writeQ(self, message):  #callback
         global writeQueue
         try:
             self.data.put(message)
